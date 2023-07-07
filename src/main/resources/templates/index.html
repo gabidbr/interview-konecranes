@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Vehicle Tracker</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <script th:src="@{/js/scripts.js}" defer></script>
+</head>
+<body>
+<div id="track" style="position:relative; width:600px; height:400px; border:1px solid #000;">
+    <div th:each="entry : ${vehicles.entrySet()}"
+         th:id="'vehicle-' + ${entry.value.id}"
+         th:style="'left:' + ${entry.value.xPosition} + 'px;top:' + ${entry.value.yPosition} + 'px;background-color:' + ${entry.value.color} + ';'"
+         class="vehicle"
+         th:data-id="${entry.value.id}">
+        <span th:text="${entry.value.id}"></span>
+    </div>
+    <div id="controls" style="margin-left: 620px;">
+    </div>
+</div>
+</body>
+</html>

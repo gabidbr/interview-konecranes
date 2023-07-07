@@ -1,0 +1,22 @@
+.vehicle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+
+.control-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.vehicle-label {
+    margin-right: 10px;
+}
+
+.control-button {
+    margin-right: 5px;
+}
